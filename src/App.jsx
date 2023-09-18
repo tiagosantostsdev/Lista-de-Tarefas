@@ -1,4 +1,4 @@
-import { Main } from "./page/main"
+import { Main } from "./pages"
 
 export const App = () => {
     return (
