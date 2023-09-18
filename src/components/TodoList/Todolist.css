@@ -1,0 +1,57 @@
+.liststodo-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 5px 2px 5px;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 0.5rem;
+}
+
+.liststodoChecked-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 5px 2px 5px;
+  align-items: center;
+  background-color: rgb(184, 186, 189);
+  text-decoration: line-through;
+  border-radius: 0.5rem;
+}
+
+.liststodoChecked-container .list-check {
+  color: green;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.list-check {
+  cursor: pointer;
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.list-text {
+  margin-top: -6px;
+  padding: 3px;
+  flex: 6;
+  user-select: none;
+  font-size: 1rem;
+}
+
+.list-icones {
+  flex: 1;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.list-icones .del {
+  color: red;
+  cursor: pointer;
+}
+
+.list-icones .edit{
+  cursor: pointer;
+}

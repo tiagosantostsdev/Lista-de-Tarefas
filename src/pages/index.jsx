@@ -1,28 +1,32 @@
-import { AiOutlineDelete } from "react-icons/ai"; 
-import { FaRegEdit } from "react-icons/fa"; 
-import { AiOutlineCheckCircle } from "react-icons/ai";  
-import { ImRadioUnchecked } from "react-icons/im"; 
+import { useState } from "react";
+import { Form } from "../components/Form";
+import { TodoList } from "../components/TodoList";
 import "./main.css";
 
 export const Main = () => {
+  const [data, setData] = useState([]);
+
+  const addtodo = (addtodo) => {
+    setData([...data, addtodo]);
+  };
+
+  function handleDel(id) {
+    const filtered = (data.filter((item) => item.id !== id))
+    setData(filtered)
+  }
+
   return (
-    <>
-      <div className="main-container-form">
-        <div className="container-form">
-          <input type="text" placeholder="Type here" />
-          <input type="button" value="Send"/>
-              </div>
-              <div className="todolist">
-                  <div className="list">
-                       <i className="list-check"><ImRadioUnchecked /></i>{/*<AiOutlineCheckCircle /> */}
-                      <div className="list-text">text list here</div>
-                      <div className="list-icones">
-                          <i className="list-icone-edit"><FaRegEdit /></i>
-                          <i className="list-icone-del"><AiOutlineDelete /></i>
-                      </div>
-                  </div>
-              </div>
+    <div className="mainPage">
+      <Form addtodo={addtodo} />
+      <div className={data >= 0 ? "" : "main-container"}>
+        {
+          data.map((item) => (
+            <span key={item.id}>
+              <TodoList item={item} handleDel={handleDel} />
+            </span>
+          ))
+        }
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}

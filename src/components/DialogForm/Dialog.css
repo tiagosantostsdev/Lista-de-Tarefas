@@ -1,0 +1,60 @@
+.dialog-container{
+    position: fixed;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.753);
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dialog-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(0, 238, 255);
+}
+
+.dialog-form p{
+    color: rgb(0, 238, 255);
+    font-size: 1.5rem;
+}
+
+.dialog-form input:first-of-type{
+    height: 2rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.dialog-form .button{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.dialog-form .button input{
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: .6rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dialog-form .button input:nth-of-type(1){
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.dialog-form .button input:nth-of-type(2){
+    background-color: #008000;
+    color: #fff;
+}
